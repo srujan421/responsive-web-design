@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Flex & Grid Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    header, footer {
+      background-color: #4a90e2;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #357ABD;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Responsive Page</h1>
+    <p>Using Flexbox and Grid Layout</p>
+  </header>
+
+  <nav>
+    <a href="headpara.html">Home</a>
+    <a href="nestedlist.html">About</a>
+    <a href="styletags.html">Projects</a>
+    <a href="table.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">📘 Card 1: Introduction</div>
+    <div class="card">📗 Card 2: Features</div>
+    <div class="card">📙 Card 3: Gallery</div>
+    <div class="card">📕 Card 4: Contact Info</div>
+  </div>
+
+  <footer>
+    &copy; 2025 Srujan's Web Design. All rights reserved.
+  </footer>
+
+</body>
+</html>
